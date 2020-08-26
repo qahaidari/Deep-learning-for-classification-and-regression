@@ -9,7 +9,9 @@ MNIST and Fashion-MNIST datasets are used. These datasets are loaded in two diff
 
 Leeds Sports Pose (LSP) dataset is used. The data will be loaded with a custom data loader. This is a dataset for 2D human pose estimation where the input is an image and the output is the human body pose, represented by a set of keypoints. A keypoint is a 2D coordinate. To demonstrate the data loading, the images and the corresponding labels will be visualized. The labels in this dataset are keypoints. For each image, the body skeleton will be drawn.
 
-3. Model Training for Classification
+3. Data loading for regression with LSP dataset using a custom data loader with variable batch size and splitting dataset to train and test sets
+
+4. Model Training for Classification
 
 The Fashion-MNIST dataset is employed for learning a classifier. The classifier will be a convolutional neural network. It includes 2 nn.Conv2d operations and 3 nn.Linear operations. The activation is ReLU. The loss function is the cross-entropy. Training is implemented based on the train set of the dataset. The test set will be used only for evaluation. The train and test sets are separated in the dataset loading section.
 
@@ -17,7 +19,7 @@ The parameters of the network are learned based on the computation of the gradie
 
 Two different plots are drawn after the model training. The error per epoch for both the train and test sets, and the accuracy per epoch for both the train and test sets.
 
-4. Model Training for Regression
+5. Model Training for Regression
 
 The LSP dataset is employed for learning a regressor. The custom dataloader which has been constructed for LSP is used here. The regressor will be a convolutional neural network. The architecture includes 3 nn.Conv2d operations and 4 nn.Linear operations. The final activation has to be linear and the loss function will be the mean squared error.
 
